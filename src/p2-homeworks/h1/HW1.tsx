@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Message from "./Message";
+import Message from './Message'
 
 // const messageData = {
 //     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
@@ -9,7 +9,7 @@ import Message from "./Message";
 // }
 type UseStateType = Array<MessagesType>
 
-type MessagesType = {
+export type MessagesType = {
     avatar: string,
     name: string,
     message: string,
@@ -17,6 +17,7 @@ type MessagesType = {
 }
 
 function HW1() {
+    
 
     let [messages, setMessages] = useState<UseStateType>([])
     let [inputValue, setInputValue] = useState<string>('')
@@ -26,12 +27,13 @@ function HW1() {
     }
 
     const onClickSend = () => {
+        const date = new Date()
         if (inputValue.trim() !== '') {
-            setMessages([...messages, {
+            setMessages(prevState => [...prevState, {
                 avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-                name: 'Some Name',
+                name: 'Vlad',
                 message: inputValue.trim(),
-                time: '22:00',
+                time: `${date.getHours()}:${date.getMinutes()}`,
             }])
             setInputValue('')
         } else alert('Нужно что нибудь написать :)')
@@ -45,9 +47,9 @@ function HW1() {
 
             {/*should work (должно работать)*/}
             {
-                messages.map( (messageObj, index) => <Message key={index} {...messageObj}/>)
+                messages.map((messageObj, index) => <Message key={index} {...messageObj}/>)
             }
-            <input onChange={onChangeInput} type="text" value={inputValue}/>
+            <input onChange={onChangeInput} type="text" value={inputValue} placeholder="Введите сообщение..."/>
             <button onClick={onClickSend}>отправить</button>
             <hr/>
             {/*для личного творчества, могу проверить*/}

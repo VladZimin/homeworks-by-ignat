@@ -1,14 +1,8 @@
 import React from 'react'
 import s from './Message.module.css'
+import {MessagesType} from "./HW1";
 
-type MessagePropsType = {
-    avatar: string,
-    name: string,
-    message: string,
-    time: string
-}
-
-function Message(props: MessagePropsType) {
+function Message(props: MessagesType) {
     return (
         <div className={s.message}>
             <img className={s.avatarImg} src={props.avatar} alt="Avatar"/>

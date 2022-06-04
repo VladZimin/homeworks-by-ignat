@@ -1,3 +1,37 @@
-.someClass {
+.tasksBlock {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 400px;
+    background: rgba(103, 140, 232, 0.29);
+    margin-bottom: 15px;
+}
 
+.tasksBlock span:first-child {
+    color: #542162;
+}
+
+.tasksBlock span {
+    font-weight: bold;
+    width: 25%;
+    text-transform: uppercase;
+}
+
+.tasksBlock button {
+    cursor: pointer;
+    border: none;
+    width: 70px;
+    background: rgba(248, 90, 42, 0.83);
+}
+
+.lowTask {
+    color: rgba(87, 210, 73, 0.98);
+}
+
+.highTask {
+    color: rgba(225, 76, 71, 0.99);
+}
+
+.middleTask {
+    color: #f8b30e;
 }
