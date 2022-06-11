@@ -1,7 +1,43 @@
-.someClass {
+.errorMsg {
+    color: red;
+    font-weight: 500;
+    font-size: 18px;
+}
 
+.addUserInput {
+    height: 30px;
+    box-sizing: border-box;
+    border: 3px solid rgba(12, 211, 6, 0.6);
+}
+
+.addUserInput:focus {
+    outline: none
+}
+
+.addUserBtn {
+    height: 30px;
+    width: 70px;
+    border: none;
+    cursor: pointer;
+    background-color: #3de02a;
+}
+
+.addUserBtn:disabled {
+    color: white;
+    background-color: rgb(136, 135, 135);
+}
+
+.totalPrice {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    color: #25ea25;
+}
+
+.addUserBtn, .totalPrice {
+    margin-left: 10px;
 }
 
 .error {
-    border: 1px solid red;
+    border: 3px solid red;
 }
