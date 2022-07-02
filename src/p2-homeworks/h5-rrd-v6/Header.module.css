@@ -1,0 +1,34 @@
+.headerContainer {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    transition: 1s;
+    transform: translateX(-370px);
+}
+
+.headerContainer:hover {
+    transform: translateX(0);
+}
+
+.navLinkItem {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(72, 225, 102, 0.87);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menuBtn {
+    width: 30px;
+    height: 30px;
+    background: rgba(103, 140, 232, 0.65);
+}
+
+.menuBtn:hover {
+}
+
+
+.square:hover {
+    cursor: pointer;
+}

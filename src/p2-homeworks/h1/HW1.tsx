@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 import Message from './Message'
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import SuperInputText from '../h4/common/c1-SuperInputText/SuperInputText'
 
-// const messageData = {
-//     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-//     name: 'Some Name',
-//     message: 'some text',
-//     time: '22:00',
-// }
+const initialState = [{
+    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+    name: 'Vlad',
+    message: 'Hello!!!',
+    time: `${new Date().getHours()}:${new Date().getMinutes()}`,
+}]
 type UseStateType = Array<MessagesType>
 
 export type MessagesType = {
@@ -17,9 +19,8 @@ export type MessagesType = {
 }
 
 function HW1() {
-    
 
-    let [messages, setMessages] = useState<UseStateType>([])
+    let [messages, setMessages] = useState<UseStateType>(initialState)
     let [inputValue, setInputValue] = useState<string>('')
 
     const onChangeInput = (e: React.FormEvent<HTMLInputElement>) => {
@@ -49,8 +50,8 @@ function HW1() {
             {
                 messages.map((messageObj, index) => <Message key={index} {...messageObj}/>)
             }
-            <input onChange={onChangeInput} type="text" value={inputValue} placeholder="Введите сообщение..."/>
-            <button onClick={onClickSend}>отправить</button>
+            <SuperInputText onChange={onChangeInput} type="text" value={inputValue} placeholder="Введите сообщение..."/>
+            <SuperButton onClick={onClickSend}>отправить</SuperButton>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeMessage/>*/}

@@ -1,5 +1,7 @@
 .blue {
-    border-bottom: 5px solid blue;
+    border-radius: initial;
+    border: none;
+    border-bottom: 3px solid #48e166;
 }
 
 .column {
@@ -11,3 +13,4 @@
 .testSpanError {
     color: blue;
 }
+

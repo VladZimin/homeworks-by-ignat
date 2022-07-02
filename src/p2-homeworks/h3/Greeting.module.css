@@ -4,22 +4,11 @@
     font-size: 18px;
 }
 
-.addUserInput {
-    height: 30px;
-    box-sizing: border-box;
-    border: 3px solid rgba(12, 211, 6, 0.6);
-}
-
-.addUserInput:focus {
-    outline: none
-}
 
 .addUserBtn {
-    height: 30px;
-    width: 70px;
-    border: none;
-    cursor: pointer;
-    background-color: #3de02a;
+    width: 80px;
+    margin-left: 15px;
+    padding: 11px;
 }
 
 .addUserBtn:disabled {
