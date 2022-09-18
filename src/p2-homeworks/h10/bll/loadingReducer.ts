@@ -1,7 +1,6 @@
 type StateType = {
     loading: boolean
 }
-
 type ActionType = ReturnType<typeof loadingAC>
 
 const initState: StateType = {
